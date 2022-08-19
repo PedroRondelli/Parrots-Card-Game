@@ -1,5 +1,44 @@
-.container{
-    width: 100vw;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+body{
     background-color: #eef9bf;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+    /* height: 100vh; */
+    /* background-color: #eef9bf; */
+    font-family: 'Roboto', sans-serif;
+}
+.titulo{
+    width: 80vw;
+    text-align: center; 
+    margin:10vh auto;
+}
+.titulo h1{
+   font-size: 56px;
+   font-weight: 700;
+   color: #75b79e;
+}
+.jogo{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    /* background-color: black; */
+    width: 80vw;
+    margin:0 auto
+}
+.card{
+    width: 117px;
+    height: 146px;
+    border: 1px solid #a7e9af;
+    border-radius: 5px;
+    background-color: #a7e9af;
+    background-image: url(./arquivosúteis/front.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    margin: 0px 30px 30px 0px;
 }
