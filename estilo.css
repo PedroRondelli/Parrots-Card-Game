@@ -7,8 +7,8 @@ body{
     display:flex;
     flex-direction: column;
     width: 100vw;
-    /* height: 100vh; */
-    /* background-color: #eef9bf; */
+    align-items: center;
+    justify-content: center;
     font-family: 'Roboto', sans-serif;
 }
 .titulo{
