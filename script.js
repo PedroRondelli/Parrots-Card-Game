@@ -34,52 +34,98 @@ function AdicaoDeCartas(cartas){
 }
 function virada_cabeludo(carta,classeBack) {
     carta.classList.add(classeBack)
+    flip = flip + 1
     turno.push(carta)
-    if(turno.length === 2){
-        verificacao(turno[0],turno[1])
+    if(turno.length === 2 ){
+        if(turno[0]!==turno[1]){
+            verificacao(turno[0],turno[1])
+        }else{
+            turno.pop()
+            flip = flip - 1
+        }    
     }
 }
 function virada_trenzin(carta,classeBack) {
     carta.classList.add(classeBack)
+    flip = flip + 1
     turno.push(carta)
-    if(turno.length === 2){
-        verificacao(turno[0],turno[1])
+    if(turno.length === 2 ){
+        if(turno[0]!==turno[1]){
+            verificacao(turno[0],turno[1])
+        }else{
+            turno.pop()
+            flip = flip - 1
+        }    
     }
 }
 function virada_metal(carta,classeBack) {
     carta.classList.add(classeBack)
+    flip = flip + 1
     turno.push(carta)
-    if(turno.length === 2){
-        verificacao(turno[0],turno[1])
+    if(turno.length === 2 ){
+        if(turno[0]!==turno[1]){
+            verificacao(turno[0],turno[1])
+        }else{
+            turno.pop()
+            flip = flip - 1
+        }    
     }
 }
 function virada_unicornio(carta,classeBack) {
     carta.classList.add(classeBack)
+    flip = flip + 1
     turno.push(carta)
-    if(turno.length === 2){
-        verificacao(turno[0],turno[1])
+    if(turno.length === 2 ){
+        if(turno[0]!==turno[1]){
+            verificacao(turno[0],turno[1])
+        }else{
+            turno.pop()
+            flip = flip - 1
+        }    
     }
 }
 function virada_swag(carta,classeBack) {
     carta.classList.add(classeBack)
+    flip = flip + 1
     turno.push(carta)
-    if(turno.length === 2){
-        verificacao(turno[0],turno[1])
+    if(turno.length === 2 ){
+        if(turno[0]!==turno[1]){
+            verificacao(turno[0],turno[1])
+        }else{
+            turno.pop()
+            flip = flip - 1
+        }    
     }
 }
 function virada_ariba(carta,classeBack) {
     carta.classList.add(classeBack)
+    flip = flip + 1
     turno.push(carta)
-    if(turno.length === 2){
-        verificacao(turno[0],turno[1])
+    if(turno.length === 2 ){
+        if(turno[0]!==turno[1]){
+            verificacao(turno[0],turno[1])
+        }else{
+            turno.pop()
+            flip = flip - 1
+        }    
     }
 }
 function virada_triplo(carta,classeBack) {
     carta.classList.add(classeBack)
+    flip = flip + 1
     turno.push(carta)
-    if(turno.length === 2){
-        verificacao(turno[0],turno[1])
+    if(turno.length === 2 ){
+        if(turno[0]!==turno[1]){
+            verificacao(turno[0],turno[1])
+        }else{
+            turno.pop()
+            flip = flip - 1
+        }    
     }
+}
+function alerta() {
+    alert(`Você ganhou em ${flip} jogadas!`)
+    
 }
 function cartasDoJogo() {
     const linguiceta = document.querySelectorAll('.card')
@@ -89,6 +135,11 @@ function cartasDoJogo() {
 function verificacao(card1,card2) {
     if(card1.classList[2] === card2.classList[2]){
         turno=[]
+        final=final + 1
+        if(final===(nCartas/2)){
+            setTimeout(alerta,2000)
+            
+        }
     }
     else{
         turno=[]
@@ -97,8 +148,8 @@ function verificacao(card1,card2) {
     }
     
 }
-
-
+let flip=0
+let final=0
 let resp ="sim"
 let nCartas = Number(prompt("Com quantas cartas deseja jogar?"))
 let acesso= "não"
