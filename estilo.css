@@ -15,6 +15,7 @@ body{
     width: 80vw;
     text-align: center; 
     margin:10vh auto;
+    
 }
 .titulo h1{
    font-size: 56px;
@@ -31,6 +32,12 @@ body{
     width: 80vw;
     margin:0 auto
 }
+.espaco{
+
+    width: 80vw;
+    background-color: black;
+    margin: 0 auto;
+}
 .card{
     width: 117px;
     height: 146px;
@@ -42,4 +49,44 @@ body{
     background-position:center;
     background-size: contain;
     margin: 0px 30px 30px 0px;
+    transition: all 0.25s ease-out;
+    
+    
+    
+}
+
+.virada_cabeludo {
+    transform: rotateY(180deg);
+    background-image: url(./arquivosúteis/bobrossparrot.gif)
+    
+}
+    
+.virada_trenzin{
+    transform: rotateY(180deg);
+    background-image: url(./arquivosúteis/revertitparrot.gif)
+}
+
+.virada_metal{
+    transform: rotateY(180deg);
+    background-image: url(./arquivosúteis/metalparrot.gif)
+}
+
+.virada_unicornio{
+    transform: rotateY(180deg);
+    background-image: url(./arquivosúteis/unicornparrot.gif)
+}
+
+.virada_swag{
+    transform: rotateY(180deg);
+    background-image: url(./arquivosúteis/explodyparrot.gif)
+}
+
+.virada_ariba{
+    transform: rotateY(180deg);
+    background-image: url(./arquivosúteis/fiestaparrot.gif)
+}
+    
+.virada_triplo{
+    transform: rotateY(180deg);
+    background-image: url(./arquivosúteis/tripletsparrot.gif)
 }
