@@ -28,15 +28,9 @@ body{
     justify-content: center;
     align-items: center;
     
-    /* background-color: black; */
+ 
     width: 80vw;
     margin:0 auto
-}
-.espaco{
-
-    width: 80vw;
-    background-color: black;
-    margin: 0 auto;
 }
 .card{
     width: 117px;
@@ -89,4 +83,19 @@ body{
 .virada_triplo{
     transform: rotateY(180deg);
     background-image: url(./arquivosúteis/tripletsparrot.gif)
+}
+
+@media (max-width: 750px){
+    .titulo h1{
+        font-size: 36px;
+    }
+    .jogo{
+        display:flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        
+    }
+    .card{
+        margin-right: 0px;
+    }
 }

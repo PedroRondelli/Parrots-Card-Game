@@ -127,6 +127,20 @@ function alerta() {
     alert(`Você ganhou em ${flip} jogadas!`)
     
 }
+function qtcartas() {
+    nCartas = Number(prompt("Com quantas cartas deseja jogar?"))
+    while(acesso ==="não"){                                          
+        if( nCartas % 2===0 && 4<=nCartas && 14>=nCartas){
+            alert("Bom Jogo!")
+            acesso="sim"
+        }else{
+            acesso="não"
+            nCartas= Number(prompt("Você precisa digitar um número par entre 4 e 14"))
+        }
+    }
+    
+    
+}
 function cartasDoJogo() {
     const linguiceta = document.querySelectorAll('.card')
     return linguiceta
@@ -137,7 +151,7 @@ function verificacao(card1,card2) {
         turno=[]
         final=final + 1
         if(final===(nCartas/2)){
-            setTimeout(alerta,2000)
+            setTimeout(alerta,1500)
             
         }
     }
@@ -151,18 +165,11 @@ function verificacao(card1,card2) {
 let flip=0
 let final=0
 let resp ="sim"
-let nCartas = Number(prompt("Com quantas cartas deseja jogar?"))
+let nCartas;
 let acesso= "não"
 let turno=[]
-while(acesso ==="não"){                                           
-    if( nCartas % 2===0 && 4<=nCartas && 14>=nCartas){
-        alert("Bom Jogo!")
-        acesso="sim"
-    }else{
-        acesso="não"
-        nCartas= Number(prompt("Você precisa digitar um número par entre 4 e 14"))
-    }
-}
+
+const digdin=setTimeout(qtcartas(),4000)
 AdicaoDeCartas(nCartas)
 arrayDoJogo = cartasDoJogo()
 
